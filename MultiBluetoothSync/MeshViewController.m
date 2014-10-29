@@ -30,6 +30,11 @@
     _detectedDevices = [[NSMutableArray alloc]initWithCapacity:2];
     
     [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updatePeriferalStatus) userInfo:nil repeats:YES];
+    
+    //start central
+    dispatch_queue_t centralQueue = dispatch_queue_create("mycentralqueue", DISPATCH_QUEUE_SERIAL);
+    _centralManager = [[CBCentralManager alloc]initWithDelegate:self queue:centralQueue];
+    
 }
 
 - (void)didReceiveMemoryWarning{
@@ -54,7 +59,6 @@
 
 -(void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI{
     
-    
     peripheral.delegate = self;
     for (CBPeripheral *storedPeriferal in _detectedDevices) {
         if(storedPeriferal!=peripheral && _detectedDevices.count <= 2){
@@ -68,7 +72,6 @@
     else if(_discoveredPeripheral_1 != nil && _discoveredPeripheral_1!= peripheral && _discoveredPeripheral_2!=peripheral ) {
         _discoveredPeripheral_2 = peripheral;
     }
-    
 }
 
 - (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)
@@ -77,7 +80,13 @@ error{
         NSLog(@"Error");
         return;
     }
+    
+    if(_discoveredPeripheral_1==peripheral){
     NSLog(@"Recived Data from s1 ---> %@",characteristic.value);
+    }
+    else{
+        NSLog(@"Recived Data from s2 ---> %@",characteristic.value);
+    }
 }
 
 - (void)peripheral:(CBPeripheral *)peripheral didUpdateNotificationStateForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {

@@ -64,7 +64,6 @@
 {
     [super viewDidLoad];
      [self loadPreviewVideo:[self getUrl]];
-    
     _titleLabel.text = _dictionary[@"title"][@"$t"];
 }
 

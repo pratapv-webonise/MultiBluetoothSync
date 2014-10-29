@@ -10,29 +10,29 @@
 	<string>MultiBluetoothSync</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>1911873D-3E31-405A-A3B4-89028BED8884</key>
+		<key>C0FF8B5B82F3C48AA2DA65D2632ECE10AF4B7049</key>
 		<string>ssh://github.com/pratapv-webonise/MultiBluetoothSync.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>MultiBluetoothSync.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>1911873D-3E31-405A-A3B4-89028BED8884</key>
+		<key>C0FF8B5B82F3C48AA2DA65D2632ECE10AF4B7049</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/pratapv-webonise/MultiBluetoothSync.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>1911873D-3E31-405A-A3B4-89028BED8884</string>
+	<string>C0FF8B5B82F3C48AA2DA65D2632ECE10AF4B7049</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>1911873D-3E31-405A-A3B4-89028BED8884</string>
+			<string>C0FF8B5B82F3C48AA2DA65D2632ECE10AF4B7049</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MultiBluetoothSync</string>
 		</dict>

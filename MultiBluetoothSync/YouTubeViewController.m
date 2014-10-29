@@ -33,6 +33,7 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self.searchDisplayController setDisplaysSearchBarInNavigationBar:NO];
     manager = [AFHTTPRequestOperationManager manager];
+    
     [self searchYoutubeVideosForTerm:@"ios"];
     isYoutubeFirstTime = YES;
 }
@@ -50,11 +51,16 @@
     if (isSearching) {
         [manager.operationQueue cancelAllOperations];
     }
+    
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
     _youtubeArray = [[NSMutableArray alloc]init];
     term = [term stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSString* searchCall = [NSString stringWithFormat:@"http://gdata.youtube.com/feeds/api/videos?q=%@&max-results=20&alt=json", term];
     
     [manager GET:searchCall parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSLog(@"%@",responseObject);
+        
        _youtubeArray = responseObject[@"feed"][@"entry"];
         if(isSearching==NO){
             [_tableView reloadData];
@@ -64,6 +70,8 @@
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"something went wrong!!!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
     }];
 }
 
