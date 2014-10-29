@@ -23,5 +23,4 @@
 
 -(IBAction)displayDevicePickerClicked:(id)sender;
 -(IBAction)pickerCloseBtnClicked:(id)sender;
--(IBAction)startMeshBtnClick:(id)sender;
 @end

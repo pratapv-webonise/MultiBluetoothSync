@@ -41,6 +41,9 @@
 		218563BC19FF5B1100E4EDB4 /* popUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 218563BB19FF5B1100E4EDB4 /* popUpView.xib */; };
 		218563C219FF68AF00E4EDB4 /* MeshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 218563C119FF68AF00E4EDB4 /* MeshViewController.m */; };
 		218563C519FF712800E4EDB4 /* YouTubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 218563C419FF712800E4EDB4 /* YouTubeViewController.m */; };
+		218563C819FF77A600E4EDB4 /* YouTubeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 218563C719FF77A600E4EDB4 /* YouTubeCell.m */; };
+		218563CA19FF77B700E4EDB4 /* YouTubeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 218563C919FF77B700E4EDB4 /* YouTubeCell.xib */; };
+		218563CD19FF942500E4EDB4 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 218563CC19FF942500E4EDB4 /* VideoViewController.m */; };
 		21BC692F19F6252D00A1EF0F /* WebClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BC692E19F6252D00A1EF0F /* WebClient.m */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +118,11 @@
 		218563C119FF68AF00E4EDB4 /* MeshViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeshViewController.m; sourceTree = "<group>"; };
 		218563C319FF712800E4EDB4 /* YouTubeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouTubeViewController.h; sourceTree = "<group>"; };
 		218563C419FF712800E4EDB4 /* YouTubeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouTubeViewController.m; sourceTree = "<group>"; };
+		218563C619FF77A600E4EDB4 /* YouTubeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouTubeCell.h; sourceTree = "<group>"; };
+		218563C719FF77A600E4EDB4 /* YouTubeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouTubeCell.m; sourceTree = "<group>"; };
+		218563C919FF77B700E4EDB4 /* YouTubeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YouTubeCell.xib; sourceTree = "<group>"; };
+		218563CB19FF942500E4EDB4 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		218563CC19FF942500E4EDB4 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		21BC692D19F6252D00A1EF0F /* WebClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebClient.h; path = ../WebClient.h; sourceTree = "<group>"; };
 		21BC692E19F6252D00A1EF0F /* WebClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebClient.m; path = ../WebClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,11 +189,16 @@
 				2166FFBE19F6220400FF6451 /* Main.storyboard */,
 				2166FFC119F6220400FF6451 /* ViewController.h */,
 				2166FFC219F6220400FF6451 /* ViewController.m */,
-				218563C019FF68AF00E4EDB4 /* MeshViewController.h */,
-				218563C119FF68AF00E4EDB4 /* MeshViewController.m */,
 				218563BB19FF5B1100E4EDB4 /* popUpView.xib */,
 				218563C319FF712800E4EDB4 /* YouTubeViewController.h */,
 				218563C419FF712800E4EDB4 /* YouTubeViewController.m */,
+				218563C619FF77A600E4EDB4 /* YouTubeCell.h */,
+				218563C719FF77A600E4EDB4 /* YouTubeCell.m */,
+				218563C919FF77B700E4EDB4 /* YouTubeCell.xib */,
+				218563CB19FF942500E4EDB4 /* VideoViewController.h */,
+				218563CC19FF942500E4EDB4 /* VideoViewController.m */,
+				218563C019FF68AF00E4EDB4 /* MeshViewController.h */,
+				218563C119FF68AF00E4EDB4 /* MeshViewController.m */,
 				21BC693019F6253B00A1EF0F /* WebClientr */,
 				2166FFC419F6220400FF6451 /* Images.xcassets */,
 				2166FFFE19F6232C00FF6451 /* UIKit+AFNetworking */,
@@ -360,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				218563BC19FF5B1100E4EDB4 /* popUpView.xib in Resources */,
+				218563CA19FF77B700E4EDB4 /* YouTubeCell.xib in Resources */,
 				2166FFC519F6220400FF6451 /* Images.xcassets in Resources */,
 				2166FFB719F6220400FF6451 /* InfoPlist.strings in Resources */,
 				2166FFC019F6220400FF6451 /* Main.storyboard in Resources */,
@@ -396,12 +410,14 @@
 				2166001719F6232C00FF6451 /* UIWebView+AFNetworking.m in Sources */,
 				21BC692F19F6252D00A1EF0F /* WebClient.m in Sources */,
 				2166FFF719F6231B00FF6451 /* AFHTTPSessionManager.m in Sources */,
+				218563CD19FF942500E4EDB4 /* VideoViewController.m in Sources */,
 				2166001219F6232C00FF6451 /* UIAlertView+AFNetworking.m in Sources */,
 				2166FFFB19F6231B00FF6451 /* AFURLRequestSerialization.m in Sources */,
 				218563C219FF68AF00E4EDB4 /* MeshViewController.m in Sources */,
 				2166001019F6232C00FF6451 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				2166FFFD19F6231B00FF6451 /* AFURLSessionManager.m in Sources */,
 				2166FFBD19F6220400FF6451 /* AppDelegate.m in Sources */,
+				218563C819FF77A600E4EDB4 /* YouTubeCell.m in Sources */,
 				218563C519FF712800E4EDB4 /* YouTubeViewController.m in Sources */,
 				2166FFB919F6220400FF6451 /* main.m in Sources */,
 			);

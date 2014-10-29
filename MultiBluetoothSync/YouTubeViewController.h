@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AFHTTPRequestOperationManager.h"
 
-@interface YouTubeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface YouTubeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate,UISearchDisplayDelegate>{
+    BOOL isSearching;
+    BOOL isYoutubeFirstTime;
+    AFHTTPRequestOperationManager *manager;
+}
+@property(nonatomic,strong) NSMutableArray *youtubeArray;
 @property(nonatomic,strong) IBOutlet UITableView *tableView;
 @end
